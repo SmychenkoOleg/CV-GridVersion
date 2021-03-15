@@ -1,0 +1,75 @@
+.main_content {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(2, 25%, 1fr);
+  max-width: 95%;
+  background-color: #fff;
+  box-shadow: 0 14px 28px #0000007b, 0 10px 10px #0000007b;
+  grid-template-areas:
+    "ps ts"
+    "ps as"
+    "cs as"
+    "cs as"
+    "cs as"
+    "cs as"
+    "cs ws"
+    "cs es"
+    "cs ss"
+    "cs ls";
+}
+@media (max-width: 800px) {
+  .main_content {
+    grid-template-columns: (1, 1fr);
+    grid-template-areas:
+      "ts"
+      "ps"
+      "as"
+      "ws"
+      "es"
+      "ss"
+      "ls"
+      "cs"; 
+  }
+  .title, .avatar, .about, .work, .education, .skills, .lang {
+  background-color:rgba(255, 255, 255, 0);  
+  }
+}
+.title{
+  background-color: #9aaa54;
+  grid-area: ts;
+  /* padding: auto; */
+}
+.about {
+  background-color: #d4acac;
+  grid-area: as;
+}
+.work {
+  background-color: #8f66ac;
+  grid-area: ws;
+}
+.education {
+  background-color: #9cbd07;
+  grid-area: es;
+}
+.skills {
+  background-color: #f09595;
+  grid-area: ss;
+}
+.lang {
+  background-color: #8dc0fa;
+  grid-area: ls;
+}
+.avatar {
+  grid-area: ps;
+  max-width: 100%;
+  max-height: 100%;
+  justify-self: center;
+}
+.contacts {
+  grid-area: cs;
+  background-color: #00425c;
+}
+
+.title, .about, .work, .education, .skills, .lang {
+  padding: 1vh 5vw;
+}
